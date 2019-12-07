@@ -9,21 +9,18 @@ import { HealthCheckService } from './health-check.service';
 export class HealthCheckComponent implements OnInit {
   result: string;
 
-  constructor(private healthCheckService: HealthCheckService) { }
+  constructor(private healthCheckService: HealthCheckService) {}
 
   ngOnInit() {
     this.getServerHealthCheck();
   }
 
   getServerHealthCheck() {
-    this.healthCheckService
-      .getServerHealthCheck()
-      .subscribe(
-        (response: any) => {
-          this.result = response.message;
-        },
-        () => {}
-      );
+    this.healthCheckService.getServerHealthCheck().subscribe(
+      (response: any) => {
+        this.result = response.message;
+      },
+      () => {}
+    );
   }
-
 }

@@ -6,15 +6,9 @@ import { AppComponent } from './app.component';
 import { HealthCheckModule } from './health-check/health-check.module';
 
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    HealthCheckModule
-  ],
+  declarations: [AppComponent],
+  imports: [BrowserModule, AppRoutingModule, HealthCheckModule],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}

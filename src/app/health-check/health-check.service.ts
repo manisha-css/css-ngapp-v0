@@ -6,14 +6,10 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class HealthCheckService {
-
-  HEALTHCHECK_URL = "http://localhost:3000"
-  constructor(
-    private httpClient: HttpClient
-  ) {}
+  HEALTHCHECK_URL = 'http://localhost:3000';
+  constructor(private httpClient: HttpClient) {}
 
   getServerHealthCheck(): Observable<any> {
-    return this.httpClient.get<any>( this.HEALTHCHECK_URL + '/healthcheck');
+    return this.httpClient.get<any>(this.HEALTHCHECK_URL + '/healthcheck');
   }
-
 }
