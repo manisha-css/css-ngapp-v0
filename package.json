@@ -16,7 +16,11 @@
     "format:check": "npm run format:prettier:check && npm run format:html:check",
     "format:fix": "npm run format:prettier:fix && npm run format:html:fix",
     "lint:fix": "ng lint --fix",
-    "format:lint:fix": "npm run format:fix && npm run lint:fix"
+    "format:lint:fix": "npm run format:fix && npm run lint:fix",
+    "build:prod": "ng build --prod",
+    "build:qa": "ng build --configuration=qa",
+    "start-prod": "ng serve --configuration=production --port 5300",
+    "start-qa": "ng serve --configuration=qa --port 6300"
   },
   "private": true,
   "dependencies": {
