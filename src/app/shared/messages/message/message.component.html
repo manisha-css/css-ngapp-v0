@@ -1,0 +1,14 @@
+<div *ngIf="alertMessage"
+  [ngClass]="{ 'alert': alertMessage, 'alert-success': alertMessage.type === 'success', 'alert-info': alertMessage.type === 'info', 'alert-danger': alertMessage.type === 'error' }">
+  {{alertMessage.text}}
+</div>
+
+<div *ngIf="toastMessage"
+  [ngClass]="{ 'toast':true, 'toastoverlay':true, 'fade':true, 'show': showtoast, 'bg-success': toastMessage.type === 'success', 'bg-info': toastMessage.type === 'info', 'bg-danger': toastMessage.type === 'error' }">
+  <div class="toast-header">
+    {{constantService.capitalizeFirstLetter(toastMessage.type)}}
+  </div>
+  <div class="toast-body">
+    {{toastMessage.text}}
+  </div>
+</div>
