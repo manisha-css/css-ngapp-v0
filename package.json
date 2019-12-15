@@ -17,6 +17,9 @@
     "format:fix": "npm run format:prettier:fix && npm run format:html:fix",
     "lint:fix": "ng lint --fix",
     "format:lint:fix": "npm run format:fix && npm run lint:fix",
+    "compodoc:gen": "./node_modules/.bin/compodoc -p ./tsconfig.json",
+    "compodoc:serve": "./node_modules/.bin/compodoc -s ./tsconfig.json",
+    "compodoc": "npm run compodoc:gen && npm run compodoc:serve",
     "build:prod": "ng build --prod",
     "build:qa": "ng build --configuration=qa",
     "start-prod": "ng serve --configuration=production --port 5300",
@@ -40,10 +43,11 @@
     "zone.js": "~0.9.1"
   },
   "devDependencies": {
-    "@angular-devkit/build-angular": "~0.803.19",
-    "@angular/cli": "~8.3.19",
+    "@angular-devkit/build-angular": "^0.803.20",
+    "@angular/cli": "^8.3.20",
     "@angular/compiler-cli": "~8.2.14",
     "@angular/language-service": "~8.2.14",
+    "@compodoc/compodoc": "^1.1.10",
     "@types/jasmine": "~3.3.8",
     "@types/jasminewd2": "~2.0.3",
     "@types/node": "~8.9.4",
