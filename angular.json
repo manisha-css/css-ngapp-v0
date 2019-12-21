@@ -44,6 +44,78 @@
               "namedChunks": false,
               "aot": true,
               "outputPath": "dist/prod/",
+              "i18nFile": "src/i18n/messages.en.xlf",
+              "i18nFormat": "xlf",
+              "i18nLocale": "en",
+              "baseHref": "/",
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb",
+                  "maximumError": "10kb"
+                }
+              ]
+            },
+            "production-mr": {
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "aot": true,
+              "outputPath": "dist/prod-mr/",
+              "i18nFile": "src/i18n/messages.mr.xlf",
+              "i18nFormat": "xlf",
+              "i18nLocale": "mr",
+              "baseHref": "/mr/",
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb",
+                  "maximumError": "10kb"
+                }
+              ]
+            },
+            "production-fr": {
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "aot": true,
+              "outputPath": "dist/prod-fr/",
+              "i18nFile": "src/i18n/messages.fr.xlf",
+              "i18nFormat": "xlf",
+              "i18nLocale": "fr",
+              "baseHref": "/fr/",
               "extractLicenses": true,
               "vendorChunk": false,
               "buildOptimizer": true,
@@ -74,6 +146,10 @@
               "namedChunks": false,
               "aot": true,
               "outputPath": "dist/qa/",
+              "i18nFile": "src/i18n/messages.en.xlf",
+              "i18nFormat": "xlf",
+              "i18nLocale": "en",
+              "baseHref": "/",
               "extractLicenses": true,
               "vendorChunk": false,
               "buildOptimizer": true,
@@ -89,6 +165,90 @@
                   "maximumError": "10kb"
                 }
               ]
+            },
+            "qa-mr": {
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.qa.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "aot": true,
+              "outputPath": "dist/qa-mr/",
+              "i18nFile": "src/i18n/messages.mr.xlf",
+              "i18nFormat": "xlf",
+              "i18nLocale": "mr",
+              "baseHref": "/mr/",
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb",
+                  "maximumError": "10kb"
+                }
+              ]
+            },
+            "qa-fr": {
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.qa.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "aot": true,
+              "outputPath": "dist/qa-fr/",
+              "i18nFile": "src/i18n/messages.fr.xlf",
+              "i18nFormat": "xlf",
+              "i18nLocale": "fr",
+              "baseHref": "/fr/",
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb",
+                  "maximumError": "10kb"
+                }
+              ]
+            },
+            "fr": {
+              "aot": true,
+              "outputPath": "dist/css-ngapp-fr",
+              "i18nFile": "src/i18n/messages.fr.xlf",
+              "i18nFormat": "xlf",
+              "i18nLocale": "fr",
+              "baseHref": "/fr"
+            },
+            "mr": {
+              "aot": true,
+              "outputPath": "dist/css-ngapp-mr",
+              "i18nFile": "src/i18n/messages.mr.xlf",
+              "i18nFormat": "xlf",
+              "i18nLocale": "mr",
+              "baseHref": "/mr"
             }
           }
         },
@@ -101,8 +261,26 @@
             "production": {
               "browserTarget": "css-ngapp:build:production"
             },
+            "production-mr": {
+              "browserTarget": "css-ngapp:build:production-mr"
+            },
+            "production-fr": {
+              "browserTarget": "css-ngapp:build:production-fr"
+            },
             "qa": {
               "browserTarget": "css-ngapp:build:qa"
+            },
+            "qa-mr": {
+              "browserTarget": "css-ngapp:build:qa-mr"
+            },
+            "qa-fr": {
+              "browserTarget": "css-ngapp:build:qa-fr"
+            },
+            "fr": {
+              "browserTarget": "css-ngapp:build:fr"
+            },
+            "mr": {
+              "browserTarget": "css-ngapp:build:mr"
             }
           }
         },
@@ -144,6 +322,18 @@
           "configurations": {
             "production": {
               "devServerTarget": "css-ngapp:serve:production"
+            }
+          }
+        },
+        "xliffmerge": {
+          "builder": "@ngx-i18nsupport/tooling:xliffmerge",
+          "options": {
+            "xliffmergeOptions": {
+              "i18nFormat": "xlf",
+              "srcDir": "src/i18n",
+              "genDir": "src/i18n",
+              "defaultLanguage": "en",
+              "languages": ["en", "fr", "mr"]
             }
           }
         }
