@@ -33,11 +33,7 @@ export class HealthCheckComponent implements OnInit {
         this.toastMessageService.success(this.result);
         this.alertMessageService.success(this.result);
       },
-      () => {
-        this.logger.error('Received error response from server');
-        this.alertMessageService.error('errot');
-        this.toastMessageService.error('error.message');
-      }
+      () => {}
     );
   }
 }
